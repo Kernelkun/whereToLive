@@ -9,6 +9,10 @@ TO-DO
         * Aquí se configura la busqueda. Calle de origen, si es en transporte público o en coche, 
     - Pantalla Show.
 + Añadir, junto a los tiempos, flechas arriba/abajo para indicar si mejora o empeora los tiempos. Colores verde y rojo.
+
+
+HECHO
+-----
 + Adapatar la lógica para que el cambio de la estructura de datos funcione. Las paradas ahora son un array.
 
 

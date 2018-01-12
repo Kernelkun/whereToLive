@@ -6,8 +6,7 @@
     <tr>
       <th>Origen</th>
       <th>Trabajo</th>
-      <th>Dojo</th>
-      <th>Total</th>
+      <th *ngFor="let header of stops">{{ header.name | capitalizeFirst }}</th>
       <th>Diferencia</th>
     </tr>
   </thead>

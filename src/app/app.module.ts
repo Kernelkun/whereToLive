@@ -7,13 +7,16 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './Components/table/table.component';
 import { GoogleDirectionsService } from './Services/google-directions.service';
 import { FooterComponent } from './Components/footer/footer.component';
+import { CapitalizeFirstPipe } from './Pipes/capitalizefirst.pipe';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    FooterComponent
+    FooterComponent,
+    CapitalizeFirstPipe
   ],
   imports: [
     BrowserModule,
