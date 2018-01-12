@@ -1,0 +1,22 @@
+<h1>Comparador de tiempos</h1>
+<h2>La localización origen es: {{ origin }}</h2>
+
+<table class="highlight">
+  <thead>
+    <tr>
+      <th>Origen</th>
+      <th>Trabajo</th>
+      <th>Dojo</th>
+      <th>Diferencia</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let p of destinations">
+      <td>{{ p.name }}</td>
+      <td>Eclair</td>
+      <td>$0.87</td>
+      <td>$0.87</td>
+    </tr>
+  </tbody>
+</table>
