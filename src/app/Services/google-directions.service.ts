@@ -11,15 +11,17 @@ export class GoogleDirectionsService {
 
   data = {
     'origin': 'Humanes de Madrid',
-    'dojo': 'Humanes de Madrid',
+    'dojo': 'Calle Camilo José Cela, 1, Humanes de Madrid',
     'work': 'Calle Príncipe de Vergara, 108. Madrid',
     'destinations': [
-        { name: 'Humanes', address: 'Calle Camilo José Cela, 1' },
-        { name: 'Leganés', address: 'Av. de Vicente Aleixandre, 10. Leganés' },
-        { name: 'Fuenlabrada', address: 'Calle de Austria, 12. Fuenlabrada' },
-        { name: 'Alcorcón', address: 'Av. de los Derechos Humanos, 19, 28924 Alcorcón, Madrid' }
+        { name: 'Humanes', address: 'Calle Camilo José Cela, 1, Humanes de Madrid', dojo: 0, work: 0, dif: 0 },
+        { name: 'Leganés', address: 'Av. de Vicente Aleixandre, 10. Leganés', dojo: 0, work: 0, dif: 0 },
+        { name: 'Fuenlabrada', address: 'Calle de Austria, 12. Fuenlabrada', dojo: 0, work: 0, dif: 0 },
+        { name: 'Alcorcón', address: 'Av. de los Derechos Humanos, 19, 28924 Alcorcón, Madrid', dojo: 0, work: 0, dif: 0 }
       ]
   };
+
+  data1 = {};
 
   constructor(private http: Http) { }
 
