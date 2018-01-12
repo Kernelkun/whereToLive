@@ -1,0 +1,18 @@
+TO-DO
+-----
+
++ Añadir buscador para configurar la dirección origen y la etiqueta con la que se va a mostrar.
++ Añadir botón y texfield para añadir las paradas de forma dinámica.
++ Añadir lógica de rutas.
+    - Pantalla Home.
+    - Pantalla Search.
+        * Aquí se configura la busqueda. Calle de origen, si es en transporte público o en coche, 
+    - Pantalla Show.
++ Añadir, junto a los tiempos, flechas arriba/abajo para indicar si mejora o empeora los tiempos. Colores verde y rojo.
++ Adapatar la lógica para que el cambio de la estructura de datos funcione. Las paradas ahora son un array.
+
+
+FUTURO
+------
+
++ Calcular los tiempos para los trabajos de dos personas.
