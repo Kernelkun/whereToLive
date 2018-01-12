@@ -1,5 +1,5 @@
 <h1>Comparador de tiempos</h1>
-<h2>La localización origen es: {{ origin }}</h2>
+<h2>La localización origen es: {{ destinations[0].name }}</h2>
 
 <table class="highlight">
   <thead>
@@ -7,6 +7,7 @@
       <th>Origen</th>
       <th>Trabajo</th>
       <th>Dojo</th>
+      <th>Total</th>
       <th>Diferencia</th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <td>{{ p.name }}</td>
       <td>{{ p.work }} min</td>
       <td>{{ p.dojo }} min</td>
+      <td>{{ p.total }} min</td>
       <td>{{ p.dif }} min</td>
     </tr>
   </tbody>

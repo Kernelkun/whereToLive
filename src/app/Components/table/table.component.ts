@@ -27,13 +27,17 @@ export class TableComponent implements OnInit {
 
   getTimeFromTo(origin: string, key: number) {
     this._googleDirections.getTimeFromTo(origin, this.dojo).subscribe((res) => {
-      this.destinations[key].dojo = Math.round(((res.routes[0].legs[0].duration.value / 60) + 0.00001) * 100) / 100;
+      this.destinations[key].dojo = (Math.round(((res.routes[0].legs[0].duration.value / 60) + 0.00001) * 100) / 100) * 2;
+
+      this.destinations[key].total = Math.round((this.destinations[key].work + this.destinations[key].dojo + 0.00001) * 100) / 100;
     });
 
     this._googleDirections.getTimeFromTo(origin, this.work).subscribe((res) => {
-      this.destinations[key].work = Math.round(((res.routes[0].legs[0].duration.value / 60) + 0.00001) * 100) / 100;
+      this.destinations[key].work = (Math.round(((res.routes[0].legs[0].duration.value / 60) + 0.00001) * 100) / 100) * 2;
 
-      const number = (this.destinations[key].work + this.destinations[key].dojo) - (this.destinations[0].work + this.destinations[0].dojo);
+      this.destinations[key].total = Math.round((this.destinations[key].work + this.destinations[key].dojo + 0.00001) * 100) / 100;
+
+      const number = this.destinations[key].total - this.destinations[0].total;
 
       this.destinations[key].dif = Math.round((number + 0.00001) * 100) / 100;
 
