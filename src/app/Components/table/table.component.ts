@@ -27,25 +27,46 @@ export class TableComponent implements OnInit {
   }
 
   getTimes(origin: string, key: number) {
+    let test = [];
+    // this.stops.forEach((item, index) => {
+    //   this._googleDirections.getTimeFromTo(origin, item.address).subscribe(
+    //     (res) => {
+    //       this.destinations[key][item.name] = (Math.round(((res.routes[0].legs[0].duration.value / 60) + 0.00001) * 100) / 100) * 2;
+
+    //       this.destinations[key].total = Math.round((this.destinations[key].work + this.destinations[key].dojo + 0.00001) * 100) / 100;
+
+    //       const number = this.destinations[key].total - this.destinations[0].total;
+
+    //       this.destinations[key].dif = Math.round((number + 0.00001) * 100) / 100;
+
+    //       // this.destinations[0].dif = 0;
+    //     },
+    //     (error) => console.log(error),
+    //     () => {
+    //       // console.log(this.destinations[key].name + ' complete!');
+    //       this.complete++;
+    //     }
+    //   );
+
+    // });
+
     this.stops.forEach((item, index) => {
-      this._googleDirections.getTimeFromTo(origin, item.address).subscribe(
-        (res) => {
-          this.destinations[key][item.name] = (Math.round(((res.routes[0].legs[0].duration.value / 60) + 0.00001) * 100) / 100) * 2;
+      test.push(this._googleDirections.getTimeFromTo(origin, item.address, item.name));
+    });
+    forkJoin(test).subscribe( (r) => {
 
-          this.destinations[key].total = Math.round((this.destinations[key].work + this.destinations[key].dojo + 0.00001) * 100) / 100;
+      r.forEach((response, index) => {
+        this.destinations[key][response.name] = (Math.round(((response.routes[0].legs[0].duration.value / 60) + 0.00001) * 100) / 100) * 2;
+  
+        let sumStops = 0;
+        this.stops.forEach((sum, sIndex) => { sumStops = sumStops + this.destinations[key][sum.name] });
+        this.destinations[key].total = Math.round((sumStops + 0.00001) * 100) / 100;
+  
+        const number = this.destinations[key].total - this.destinations[0].total;
+        this.destinations[key].dif = Math.round((number + 0.00001) * 100) / 100;
+      });
 
-          const number = this.destinations[key].total - this.destinations[0].total;
-
-          this.destinations[key].dif = Math.round((number + 0.00001) * 100) / 100;
-
-          // this.destinations[0].dif = 0;
-        },
-        (error) => console.log(error),
-        () => {
-          // console.log(this.destinations[key].name + ' complete!');
-          this.complete++;
-        }
-      );
+      
     });
   }
 
@@ -53,6 +74,7 @@ export class TableComponent implements OnInit {
     this.destinations.forEach((item, index) => {
       this.getTimes(item.address, index);
     });
+    // this.destinations.forEach((item, key) => { this.compareTimes(item, key); });
   }
 
   compareTimes(item, key) {
