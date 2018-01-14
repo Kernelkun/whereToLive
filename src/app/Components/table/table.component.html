@@ -14,10 +14,10 @@
   <tbody>
     <tr *ngFor="let p of destinations">
       <td>{{ p.name }}</td>
-      <td>{{ p.work }} min</td>
-      <td>{{ p.dojo }} min</td>
-      <td>{{ p.total }} min</td>
-      <td>{{ p.dif }} min</td>
+      <td>{{ p.work }} min <i *ngIf="p.comparision" class="fa fa-arrow-{{ p.comparision }}" aria-hidden="true"></i></td>
+      <td>{{ p.dojo }} min <i *ngIf="p.comparision" class="fa fa-arrow-{{ p.comparision }}" aria-hidden="true"></i></td>
+      <td>{{ p.total }} min <i *ngIf="p.comparision" class="fa fa-arrow-{{ p.comparision }}" aria-hidden="true"></i></td>
+      <td>{{ p.dif }} min <i *ngIf="p.comparision" class="fa fa-arrow-{{ p.comparision }}" aria-hidden="true"></i></td>
     </tr>
   </tbody>
 </table>
