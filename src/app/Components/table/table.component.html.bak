@@ -1,11 +1,5 @@
 <h1>Comparador de tiempos</h1>
 <h2>La localización origen es: {{ destinations[0].name }}</h2>
-<br>
-<br>
-
-<a class="btn btn-default" [routerLink]="['/editTable']"><!--(click)="goToEdit()" -->
-  <i class="fa fa-cog" aria-hidden="true"></i> Settings
-</a>
 
 <table class="highlight">
   <thead>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { GoogleDirectionsService } from '../../Services/google-directions.service';
 import { Observable } from 'rxjs/Observable';
 import { forkJoin } from 'rxjs/observable/forkJoin';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-table',

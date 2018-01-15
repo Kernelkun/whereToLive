@@ -1,0 +1,44 @@
+<a class="btn btn-danger" [routerLink]="['/table']">
+  <!--(click)="goToEdit()" -->
+  <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
+</a>
+
+<br>
+<br>
+<br>
+
+<form method="POST" class="form form-inline" (ngSubmit)="submit()" #listaCompraForm="ngForm"> <!--para agregar validaciones despues #listaCompraForm-->
+
+  <div class="form-group">
+    <label for="txtNombre">Origin</label>
+    <input id="txtNombre" name="txtNombre"/><!--[(ngModel)]="" -->
+  </div>
+
+
+  <div class="form-group">
+    <label for="txtDescripcion">Stop 1</label>
+    <input type="text" id="txtDescripcion" name="txtDescripcion"/>
+  </div>
+
+
+  <div class="form-group">
+    <label for="txtUds">Stop 2</label>
+    <input type="text" id="txtUds" name="txtUds"/>
+  </div>
+
+
+  <div class="form-group">
+    <label for="txtPrecio">Destination</label>
+    <input type="text" id="txtPrecio" name="txtPrecio"/>
+  </div>
+
+
+  <div class="form-group">
+
+    <div class="col-sm-10 col-sm-offset-2">
+      <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+
+  </div>
+
+</form> 
