@@ -11,6 +11,8 @@ import { GoogleDirectionsService } from './Services/google-directions.service';
 import { FooterComponent } from './Components/footer/footer.component';
 import { CapitalizeFirstPipe } from './Pipes/capitalizefirst.pipe';
 import { EditTableComponent } from './Components/edit-table/edit-table.component';
+import { HomeComponent } from './Components/home/home.component';
+import { ErrorComponent } from './Components/error/error.component';
 
 
 
@@ -21,6 +23,8 @@ import { EditTableComponent } from './Components/edit-table/edit-table.component
     FooterComponent,
     CapitalizeFirstPipe,
     EditTableComponent,
+    HomeComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
