@@ -14,9 +14,13 @@
   <tbody>
     <tr *ngFor="let p of destinations">
       <td>{{ p.name }}</td>
-      <td *ngFor="let cell of stops">{{ p[cell.name] }} min <i *ngIf="p.comparision" class="fa fa-arrow-{{ p.comparision }}" aria-hidden="true"></i></td>
-      <td>{{ p.total }} min <i *ngIf="p.comparision" [ngClass]="{'fa-arrow-up': p.total < destinations[0].total, 'fa-arrow-down': p.total > destinations[0].total}" class="fa fa-arrow-{{ p.comparision }}" aria-hidden="true"></i></td>
-      <td>{{ p.dif }} min <i *ngIf="p.comparision" class="fa fa-arrow-{{ p.comparision }}" aria-hidden="true"></i></td>
+
+      <td *ngFor="let cell of stops">
+        {{ p[cell.name] }} min <i *ngIf="p[cell.name+'Comparision']" class="fa fa-arrow-{{ p[cell.name+'Comparision'] }}" aria-hidden="true"></i>
+      </td>
+
+      <td>{{ p.total }} min <i *ngIf="p.totalComparision" class="fa fa-arrow-{{ p.totalComparision }}" aria-hidden="true"></i></td>
+      <td>{{ p.dif }} min <i *ngIf="p.difComparision" class="fa fa-arrow-{{ p.difComparision }}" aria-hidden="true"></i></td>
     </tr>
   </tbody>
 </table>

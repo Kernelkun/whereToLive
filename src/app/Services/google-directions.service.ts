@@ -60,11 +60,12 @@ export class GoogleDirectionsService {
     return this.data.destinations;
   }
 
-  getTimeFromTo(origin: string, destination: string, colum: string) {
+  getTimeFromTo(origin: string, destination: string, colum: string, index) {
     const queryURL = this.baseUrl + 'origin=' + origin + '&destination=' + destination + this.key + '&mode=transit';
     return this.http.get(queryURL).map((data) => {
-      let json = data.json();
+      const json = data.json();
       json.name = colum;
+      json.index = index;
       return json;
     });
   }

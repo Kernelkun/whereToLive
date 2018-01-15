@@ -20,3 +20,5 @@ FUTURO
 ------
 
 + Calcular los tiempos para los trabajos de dos personas.
++ Evaluar los pisos en función a diferentes factores y asignarle puntos. Distancia a la estación de cercanías, 
+  mejora de tiempos con respecto al anterior piso... Etc.
