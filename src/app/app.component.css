@@ -1,0 +1,51 @@
+nav .brand-logo {
+    /* padding-left: 3%; */
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.3em;
+}
+
+div.logo > a {
+    width: 80%;
+    padding-left: 1%;
+}
+
+nav > a {
+    width: 15%;
+}
+
+nav > ul {
+    width: 20%;
+}
+
+nav > ul > li {
+    list-style: none;
+}
+
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+div.logo > svg {
+    fill: url(#gradient);
+    width: 5%;
+}

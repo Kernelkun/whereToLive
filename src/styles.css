@@ -1,7 +1,18 @@
 body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background: rgba(16,148,148,1);
+    background: -moz-linear-gradient(45deg, rgba(16,148,148,1) 0%, rgba(28,95,166,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(16,148,148,1)), color-stop(100%, rgba(28,95,166,1)));
+    background: -webkit-linear-gradient(45deg, rgba(16,148,148,1) 0%, rgba(28,95,166,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(16,148,148,1) 0%, rgba(28,95,166,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(16,148,148,1) 0%, rgba(28,95,166,1) 100%);
+    background: linear-gradient(45deg, rgba(16,148,148,1) 0%, rgba(28,95,166,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#109494', endColorstr='#1c5fa6', GradientType=1 );
 }
 
 header {
