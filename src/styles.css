@@ -46,7 +46,7 @@ app-root {
     height: 100%;
 }
 
-app-edit-table, app-home {
+app-edit-table, app-hom, .center {
     display: flex;
     justify-content: center;
     flex-direction: column;
