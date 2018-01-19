@@ -45,3 +45,11 @@ main {
 app-root {
     height: 100%;
 }
+
+app-edit-table, app-home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
