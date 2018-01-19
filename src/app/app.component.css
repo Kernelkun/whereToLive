@@ -40,6 +40,9 @@ div.search-button > a {
     width: 50%;
     text-align: center;
     padding: 3% 1%;
+}
+
+.color-gradient {
     background: -webkit-linear-gradient(135deg, rgba(41,173,61,1) 0%, rgba(245,235,97,1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
